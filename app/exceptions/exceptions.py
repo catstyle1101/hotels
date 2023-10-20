@@ -1,0 +1,4 @@
+
+
+class ModelNotDefinedError(Exception):
+    pass
