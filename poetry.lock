@@ -891,6 +891,17 @@ pycrypto = ["pyasn1", "pycrypto (>=2.6.0,<2.7.0)"]
 pycryptodome = ["pyasn1", "pycryptodome (>=3.3.1,<4.0.0)"]
 
 [[package]]
+name = "python-json-logger"
+version = "2.0.7"
+description = "A python library adding a json log formatter"
+optional = false
+python-versions = ">=3.6"
+files = [
+    {file = "python-json-logger-2.0.7.tar.gz", hash = "sha256:23e7ec02d34237c5aa1e29a070193a4ea87583bb4e7f8fd06d3de8264c4b2e1c"},
+    {file = "python_json_logger-2.0.7-py3-none-any.whl", hash = "sha256:f380b826a991ebbe3de4d897aeec42760035ac760345e57b812938dc8b35e2bd"},
+]
+
+[[package]]
 name = "python-multipart"
 version = "0.0.6"
 description = "A streaming multipart parser for Python"
@@ -1112,6 +1123,42 @@ files = [
     {file = "tomli-2.0.1-py3-none-any.whl", hash = "sha256:939de3e7a6161af0c887ef91b7d41a53e7c5a1ca976325f429cb46ea9bc30ecc"},
     {file = "tomli-2.0.1.tar.gz", hash = "sha256:de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"},
 ]
+
+[[package]]
+name = "types-passlib"
+version = "1.7.7.13"
+description = "Typing stubs for passlib"
+optional = false
+python-versions = "*"
+files = [
+    {file = "types-passlib-1.7.7.13.tar.gz", hash = "sha256:f152639f1f2103d7f59a56e2aec5f9398a75a80830991d0d68aac5c2b9c32a77"},
+    {file = "types_passlib-1.7.7.13-py3-none-any.whl", hash = "sha256:414b5ee9c88313357c9261cfcf816509b1e8e4673f0796bd61e9ef249f6fe076"},
+]
+
+[[package]]
+name = "types-pyasn1"
+version = "0.5.0.0"
+description = "Typing stubs for pyasn1"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "types-pyasn1-0.5.0.0.tar.gz", hash = "sha256:4bfea6548206866302885c36aba945c0deaa40898a313112b5cff7f903a56d71"},
+    {file = "types_pyasn1-0.5.0.0-py3-none-any.whl", hash = "sha256:62f1ba64c9f8975de301014722e154ef1d6097463844de1ed733e719dfc87780"},
+]
+
+[[package]]
+name = "types-python-jose"
+version = "3.3.4.8"
+description = "Typing stubs for python-jose"
+optional = false
+python-versions = "*"
+files = [
+    {file = "types-python-jose-3.3.4.8.tar.gz", hash = "sha256:3c316675c3cee059ccb9aff87358254344915239fa7f19cee2787155a7db14ac"},
+    {file = "types_python_jose-3.3.4.8-py3-none-any.whl", hash = "sha256:95592273443b45dc5cc88f7c56aa5a97725428753fb738b794e63ccb4904954e"},
+]
+
+[package.dependencies]
+types-pyasn1 = "*"
 
 [[package]]
 name = "typing-extensions"
@@ -1438,4 +1485,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "0a8986e374dfa90194de3ff1fc0b1e8d32293701c5e675253d33fa64759b7804"
+content-hash = "7e74812d660c700713d72d09a9be3adfc8527aa2de88f29ca5b8fd3f9b821e04"
