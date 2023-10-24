@@ -21,7 +21,7 @@ router_users = APIRouter(
     tags=["Пользователи"],
 )
 
-@router_auth.post("/register", status_code=201)
+@router_auth.post("/register", status_code=201, response_model=None)
 async def register_user(user_data: SUserAuth) -> None:
     existing_user = await UserRepository.find_one_or_none(
         email=user_data.email)
@@ -34,7 +34,7 @@ async def register_user(user_data: SUserAuth) -> None:
         raise CannotAddDataToDatabase
 
 
-@router_auth.post("/login")
+@router_auth.post("/login", response_model=None)
 async def login_user(
     response: Response, user_data: SUserAuth) -> dict[str, str]:
     user = await authenticate_user(user_data.email, user_data.password)
@@ -43,12 +43,12 @@ async def login_user(
     return {"access_token": access_token}
 
 
-@router_auth.post("/logout")
+@router_auth.post("/logout", response_model=None)
 async def logout_user(response: Response) -> None:
     response.delete_cookie("booking_access_token")
 
 
 @router_users.get("/me")
 async def read_users_me(
-    current_user: Users = Depends(get_current_user)) -> Users:
+    current_user: Users = Depends(get_current_user)) -> SUserAuth:
     return current_user

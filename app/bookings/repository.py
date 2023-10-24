@@ -12,7 +12,7 @@ from app.logger import logger
 from app.service.base import BaseRepository
 
 
-class BookingDAO(BaseRepository):
+class BookingRepository(BaseRepository):
     model = Bookings
 
     @classmethod

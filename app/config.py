@@ -21,5 +21,5 @@ class Settings(BaseSettings):
             f"@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
         )
 
-# Settings.model_construct()
-settings = Settings.model_construct()
+Settings.model_construct()
+settings = Settings()
