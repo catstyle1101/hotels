@@ -22,6 +22,7 @@ app.include_router(router_images)
 
 origins = [
     "http://localhost:3000",
+    "http://localhost:8000",
 ]
 
 app.add_middleware(
