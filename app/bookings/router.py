@@ -12,5 +12,5 @@ router = APIRouter(
 
 
 @router.get("", response_model=list[SBooking])
-async def get_bookings():
+async def get_bookings() -> Sequence[RowMapping]:
     return await BookingRepository.find_all()
